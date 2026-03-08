@@ -37,7 +37,7 @@ export function HeroSection() {
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:contact@ryantang.dev", label: "Email" },
-    { icon: Phone, href: "tel:+44 7376411777", label: "Phone" },
+    { icon: Phone,label: "Almost leaked it" },
   ];
 
   return (
@@ -94,7 +94,7 @@ export function HeroSection() {
 
         {/* Social Links */}
         <div
-          className="fade-in-section opacity-0 flex justify-center gap-4 mb-12"
+          className="fade-in-section opacity-0 flex justify-center gap-4 mb-4"
           style={{ animationDelay: "0.8s" }}
         >
           {socialLinks.map((link) => (
@@ -116,12 +116,12 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div
-          className="fade-in-section opacity-0 flex flex-col sm:flex-row gap-4 justify-center"
+          className="fade-in-section opacity-0 flex flex-col sm:flex-row gap-4 justify-center mt-16"
           style={{ animationDelay: "1s" }}
         >
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/80 text-primary-foreground px-8"
+            className="bg-primary hover:bg-primary/80 text-primary-foreground px-8 mt-8"
             onClick={() =>
               document
                 .getElementById("contact")
@@ -133,7 +133,7 @@ export function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-border hover:bg-secondary/50 px-8"
+            className="border-border hover:bg-secondary/50 px-8 mt-8"
             onClick={() =>
               document
                 .getElementById("projects")
@@ -146,7 +146,7 @@ export function HeroSection() {
 
         {/* Scroll Indicator */}
         <div
-          className="fade-in-section opacity-0 absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="fade-in-section opacity-0 absolute bottom-14 left-1/2 -translate-x-1/2"
           style={{ animationDelay: "1.2s" }}
         >
           <button
