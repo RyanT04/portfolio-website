@@ -19,7 +19,7 @@ const contactLinks = [
     icon: Phone,
     label: "Phone",
     value: "Almost leaked again",
-    href: "",
+    href: "#",
     color: "group-hover:text-[oklch(0.85_0.18_85)]",
   },
   {
@@ -110,6 +110,7 @@ export function ContactSection() {
             <div className="space-y-4">
               {contactLinks.map((link) => (
                 <a
+                  onClick={link.href === "#" ? (e) => e.preventDefault() : undefined}
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
