@@ -25,14 +25,14 @@ const contactLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/ryankwangloketang/",
+    value: "ryankwangloketang",
     href: "https://www.linkedin.com/in/ryankwangloketang/",
     color: "group-hover:text-[oklch(0.40_0.18_250)]",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/RyanT04",
+    value: "RyanT04",
     href: "https://github.com/RyanT04",
     color: "group-hover:text-primary",
   },
