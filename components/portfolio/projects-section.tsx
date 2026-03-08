@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
-import { Github, ExternalLink, Zap, Database, Server, Code2 } from "lucide-react"
+import { Github, ExternalLink, Zap, Database, Server, Code2, ChefHat, ChartCandlestick } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
@@ -11,7 +11,7 @@ const projects = [
     title: "Cryptocurrency Trading Simulator",
     description: "Full-stack trading simulator with high-performance order matching engine. Features real-time market data, portfolio management, and comprehensive performance profiling.",
     period: "Sep 2025 – Present",
-    icon: Zap,
+    icon: ChartCandlestick,
     color: "from-[oklch(0.85_0.18_85)] to-[oklch(0.75_0.15_75)]",
     technologies: ["Vite", "Express.js", "Go", "PostgreSQL", "AWS CDK"],
     highlights: [
@@ -37,7 +37,7 @@ const projects = [
     description: "Cost-based query optimizer implementing relational algebra cost estimation. Uses the Visitor pattern for traversing operator trees and finding optimal execution plans.",
     period: "Feb 2026 – Present",
     icon: Database,
-    color: "from-[oklch(0.40_0.18_250)] to-primary",
+    color: "from-[oklch(0.40_0.18_250)] to-[oklch(0.30_0.15_150)]",
     technologies: ["Java", "Visitor Pattern", "Relational Algebra"],
     highlights: [
       { metric: "Cost-based", label: "Query Estimation" },
@@ -61,7 +61,7 @@ const projects = [
     title: "Encode Hub: Commit to Change Hackathon (Ambrosia)",
     description: "An AI-powered full-stack web application that optimizes healthy eating within a budget by combining real-time grocery pricing with nutritional data.",
     period: "Feb 2026",
-    icon: Database,
+    icon: ChefHat,
     color: "from-[oklch(0.40_0.18_250)] to-primary",
     technologies: ["Next.js", "TypeScript", "Supabase", "Vercel", "AI/LLM APIs", "Google APIs"],
     highlights: [
