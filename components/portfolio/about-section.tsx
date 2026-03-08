@@ -58,7 +58,7 @@ export function AboutSection() {
             About Me
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-6 text-balance">
-            Technical. Innovative.{" "}
+            Innovative. Resourceful.{" "}
             <span className="bg-gradient-to-r from-[oklch(0.40_0.18_250)] to-[oklch(0.85_0.18_85)] bg-clip-text text-transparent">
               Versatile.
             </span>
@@ -77,7 +77,7 @@ export function AboutSection() {
             <p className="text-lg leading-relaxed text-muted-foreground">
               My approach combines rigorous technical standards with creative
               problem-solving. From architecting high-performance trading
-              simulators to developing AI-driven interview platforms, I focus on
+              simulators to improving AI-driven interview platforms, I focus on
               delivering measurable results.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">

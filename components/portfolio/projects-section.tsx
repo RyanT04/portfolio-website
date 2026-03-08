@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: "Cryptocurrency Trading Simulator",
     description: "Full-stack trading simulator with high-performance order matching engine. Features real-time market data, portfolio management, and comprehensive performance profiling.",
-    period: "Sep 2025 – May 2026",
+    period: "Sep 2025 – Present",
     icon: Zap,
     color: "from-[oklch(0.85_0.18_85)] to-[oklch(0.75_0.15_75)]",
     technologies: ["Vite", "Express.js", "Go", "PostgreSQL", "AWS CDK"],
@@ -27,7 +27,7 @@ const projects = [
       "Real-time profiling of latency and CPU bottlenecks",
     ],
     links: {
-      github: "https://github.com/ryantang/crypto-simulator",
+      github: "https://github.com/RyanT04",
       live: null,
     },
   },
@@ -52,8 +52,33 @@ const projects = [
       "Comprehensive test suite for query optimization",
     ],
     links: {
-      github: "https://github.com/ryantang/sjdb-optimizer",
+      github: "https://github.com/RyanT04",
       live: null,
+    },
+  },
+  {
+    id: 3,
+    title: "Encode Hub: Commit to Change Hackathon (Ambrosia)",
+    description: "An AI-powered full-stack web application that optimizes healthy eating within a budget by combining real-time grocery pricing with nutritional data.",
+    period: "Feb 2026",
+    icon: Database,
+    color: "from-[oklch(0.40_0.18_250)] to-primary",
+    technologies: ["Next.js", "TypeScript", "Supabase", "Vercel", "AI/LLM APIs", "Google APIs"],
+    highlights: [
+      { metric: "4-Week", label: "Hackathon Build" },
+      { metric: "Real-time", label: "Grocery Pricing" },
+      { metric: "AI-Powered", label: "Meal Planning" },
+    ],
+    features: [
+      "Designed and built the full frontend UI/UX using Next.js, focusing on intuitive budget and nutrition tracking flows",
+      "Led ideation and concept development around the themes of Financial Health and Health, Fitness & Wellness",
+      "Integrated real-time grocery pricing and nutritional data from public APIs to power budget-aware meal recommendations",
+      "Implemented user authentication and database management using Supabase",
+      "Deployed and hosted the application on Vercel with continuous deployment",
+    ],
+    links: {
+      github: "https://github.com/Karso2023/ambrosia",
+      live: "https://ambrosia-sage.vercel.app/",
     },
   },
 ]

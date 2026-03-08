@@ -93,7 +93,7 @@ export function SkillsSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 text-balance">
             Technical{" "}
             <span className="bg-gradient-to-r from-[oklch(0.85_0.18_85)] to-[oklch(0.55_0.22_25)] bg-clip-text text-transparent">
-              Arsenal
+              Skills
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl">

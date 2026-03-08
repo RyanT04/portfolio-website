@@ -29,10 +29,11 @@ export function EducationSection() {
   const courses = [
     "Software Engineering Principles",
     "Data Structures & Algorithms",
-    "Database Systems",
+    "Database Management Systems",
     "Cloud Computing",
     "Machine Learning",
     "Formal Methods",
+    "Agile Projects",
   ]
 
   return (
@@ -82,7 +83,7 @@ export function EducationSection() {
 
               {/* Description */}
               <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-                {"Pursuing a rigorous Software Engineering degree with focus on practical application of computer science principles, software development methodologies, and emerging technologies. Active participant in university hackathons and coding competitions."}
+                {"Pursuing a rigorous Software Engineering degree with focus on practical application of computer science principles, algorithms and data structures, software development methodologies, and emerging technologies. Active participant in hackathons and coding competitions."}
               </p>
 
               {/* Key Courses */}

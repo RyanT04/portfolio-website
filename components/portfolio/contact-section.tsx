@@ -18,8 +18,8 @@ const contactLinks = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 7376411777",
-    href: "tel:+44 7376411777",
+    value: "Almost leaked again",
+    href: "",
     color: "group-hover:text-[oklch(0.85_0.18_85)]",
   },
   {
@@ -135,7 +135,7 @@ export function ContactSection() {
                 <span className="font-medium text-foreground">Based in</span>
               </div>
               <p className="text-muted-foreground">
-                Southampton, United Kingdom <span className="text-foreground">/</span> Kuala Lumpur, Malaysia
+                United Kingdom <span className="text-foreground">/</span> Malaysia <span className="text-foreground">/</span> Brunei Darussalam
               </p>
             </div>
           </div>

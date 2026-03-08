@@ -133,7 +133,7 @@ export function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-border hover:bg-secondary/50 px-8 mt-8"
+            className="border-border hover:bg-secondary/95 px-8 mt-8"
             onClick={() =>
               document
                 .getElementById("projects")

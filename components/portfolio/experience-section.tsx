@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
-import { Briefcase, Calendar, ChevronDown, ChevronUp, TrendingUp, BarChart3, Code2 } from "lucide-react"
+import { Briefcase, Calendar, ChevronDown, ChevronUp, TrendingUp, BarChart3, Code2, LaptopMinimalCheck} from "lucide-react"
 
 const experiences = [
   {
@@ -11,7 +11,7 @@ const experiences = [
     role: "Growth Engineer (Full-Stack)",
     type: "Full-time",
     period: "Dec 2025 – Feb 2026",
-    location: "Singapore",
+    location: "Online, Singapore",
     icon: Code2,
     color: "from-[oklch(0.40_0.18_250)] to-primary",
     highlights: [
@@ -27,8 +27,8 @@ const experiences = [
     company: "Trane Aire Sdn Bhd",
     role: "Finance/Business Analyst Trainee",
     type: "Full-time Internship",
-    period: "Jul 2025 – Sep 2026",
-    location: "Malaysia",
+    period: "Jul 2025 – Sep 2025",
+    location: "Brunei Darussalam",
     icon: BarChart3,
     color: "from-[oklch(0.55_0.22_25)] to-[oklch(0.85_0.18_85)]",
     highlights: [
@@ -37,7 +37,24 @@ const experiences = [
       "Budget preparation and variance analysis, identifying potential savings of 5%",
       "Create weekly dashboards for management decision-making",
     ],
-    technologies: ["Excel", "Power BI", "SQL", "Python", "Data Analysis"],
+    technologies: ["Excel", "SQL", "Python", "Data Analysis"],
+  },
+  {
+    id: 3,
+    company: "Trane Aire Sdn Bhd",
+    role: "Computer Technician Trainee",
+    type: "Full-time Internship",
+    period: "Jul 2024 – Sep 2024",
+    location: "Brunei Darussalam",
+    icon: LaptopMinimalCheck,
+    color: "from-[oklch(0.55_0.22_25)] to-[oklch(0.85_0.18_85)]",
+    highlights: [
+      "Delivered end-to-end technical support across software configuration, system maintenance, and network troubleshooting in a corporate environment",
+      "Deployed, configured, and maintained operating systems and enterprise software, ensuring system stability, security compliance, and minimal downtime",
+      "Diagnosed and resolved network connectivity issues using tools such as ipconfig, ping, and tracert, reducing resolution time for recurring incidents",
+      "Maintained IT documentation and issue tracking records, contributing to a structured knowledge base that improved troubleshooting efficiency across the team",
+    ],
+    technologies: ["Windows OS", "TCP/IP", "Network Diagnostics", "Active Directory", "Cloud Storage"],
   },
 ]
 
