@@ -103,7 +103,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Links */}
           <div className="fade-in-section opacity-0">
             <h3 className="text-lg font-semibold mb-6 text-foreground">Get in Touch</h3>
@@ -142,6 +142,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
+          {false && (
           <div className="fade-in-section opacity-0" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-lg font-semibold mb-6 text-foreground">Send a Message</h3>
             
@@ -220,6 +221,7 @@ export function ContactSection() {
               </form>
             )}
           </div>
+          )}
         </div>
       </div>
     </section>
