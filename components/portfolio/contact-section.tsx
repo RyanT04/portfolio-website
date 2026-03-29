@@ -1,11 +1,12 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { Github, Linkedin, Mail, Phone, Send, MapPin, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useForm, ValidationError } from "@formspree/react"
 
 const contactLinks = [
   {
@@ -36,17 +37,11 @@ const contactLinks = [
     href: "https://github.com/RyanT04",
     color: "group-hover:text-primary",
   },
-];
+]
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null)
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [state, handleSubmit] = useForm("xnjojygn")
 
   useEffect(() => {
     const section = sectionRef.current
@@ -68,26 +63,11 @@ export function ContactSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: "", email: "", message: "" })
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
-  }
-
   return (
     <section id="contact" ref={sectionRef} className="py-24 px-6 relative">
       {/* Background Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-secondary/30 to-transparent pointer-events-none" />
-      
+
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="fade-in-section opacity-0 mb-12 text-center">
@@ -103,16 +83,17 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Links */}
           <div className="fade-in-section opacity-0">
             <h3 className="text-lg font-semibold mb-6 text-foreground">Get in Touch</h3>
             <div className="space-y-4">
               {contactLinks.map((link) => (
+                
                 <a
-                  onClick={link.href === "#" ? (e) => e.preventDefault() : undefined}
                   key={link.label}
                   href={link.href}
+                  onClick={link.href === "#" ? (e) => e.preventDefault() : undefined}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="group flex items-center gap-4 p-4 rounded-2xl glass card-hover"
@@ -136,17 +117,16 @@ export function ContactSection() {
                 <span className="font-medium text-foreground">Based in</span>
               </div>
               <p className="text-muted-foreground">
-                United Kingdom <span className="text-foreground">/</span> Malaysia <span className="text-foreground">/</span> Brunei Darussalam
+                United Kingdom <span className="text-foreground">/</span> Malaysia <span className="text-foreground">/</span> Brunei 
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          {false && (
           <div className="fade-in-section opacity-0" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-lg font-semibold mb-6 text-foreground">Send a Message</h3>
-            
-            {isSubmitted ? (
+
+            {state.succeeded ? (
               <div className="p-8 rounded-2xl glass text-center">
                 <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
                   <Send className="h-8 w-8 text-green-500" />
@@ -162,14 +142,13 @@ export function ContactSection() {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     placeholder="Your name"
-                    value={formState.name}
-                    onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                     required
                     className="bg-secondary/50 border-border focus:border-primary"
                   />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-sm mt-1" />
                 </div>
-
                 <div>
                   <label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">
                     Email
@@ -177,36 +156,34 @@ export function ContactSection() {
                   <Input
                     id="email"
                     type="email"
+                    name="email"
                     placeholder="your@email.com"
-                    value={formState.email}
-                    onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                     required
                     className="bg-secondary/50 border-border focus:border-primary"
                   />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
                 </div>
-
                 <div>
                   <label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">
                     Message
                   </label>
                   <Textarea
                     id="message"
-                    placeholder="Tell me about your project..."
+                    name="message"
+                    placeholder="Tell me anything!"
                     rows={5}
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     required
                     className="bg-secondary/50 border-border focus:border-primary resize-none"
                   />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-sm mt-1" />
                 </div>
-
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full gap-2 bg-primary hover:bg-primary/80"
-                  disabled={isSubmitting}
+                  disabled={state.submitting}
                 >
-                  {isSubmitting ? (
+                  {state.submitting ? (
                     <>
                       <div className="h-4 w-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
                       Sending...
@@ -221,7 +198,6 @@ export function ContactSection() {
               </form>
             )}
           </div>
-          )}
         </div>
       </div>
     </section>
