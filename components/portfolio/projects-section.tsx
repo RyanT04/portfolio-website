@@ -2,15 +2,15 @@
 
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
-import { Github, ExternalLink, Zap, Database, Server, Code2, ChefHat, ChartCandlestick } from "lucide-react"
+import { Github, ExternalLink, Zap, Database, Server, Code2, ChefHat, ChartCandlestick, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
   {
     id: 1,
     title: "Cryptocurrency Trading Simulator",
-    description: "Full-stack trading simulator with high-performance order matching engine. Features real-time market data, portfolio management, and comprehensive performance profiling.",
-    period: "Sep 2025 – Present",
+    description: "Backend-focused trading simulator engineered for performance — built to benchmark how far a Go order-matching engine and AWS infrastructure can push latency below a traditional Node.js stack. The architectural counterpart to TradeX.",
+    period: "Apr 2026 – Present",
     icon: ChartCandlestick,
     color: "from-[oklch(0.85_0.18_85)] to-[oklch(0.75_0.15_75)]",
     technologies: ["Vite", "Express.js", "Go", "PostgreSQL", "AWS CDK"],
@@ -20,7 +20,7 @@ const projects = [
       { metric: "ECS", label: "Fargate Deployment" },
     ],
     features: [
-      "Go order-matching engine achieving 60–75% latency reduction",
+      "Go order-matching engine achieving 60–75% latency reduction over Node.js",
       "Unified monorepo architecture with ECS Fargate deployment",
       "PostgreSQL optimization and structured logging",
       "Cloud infrastructure provisioning via AWS CDK",
@@ -33,6 +33,31 @@ const projects = [
   },
   {
     id: 2,
+    title: "TradeX — Crypto Trading Simulator",
+    description: "A fully deployed crypto trading simulator with live Bybit price feeds, spot and leveraged trading, and real-time portfolio tracking — built to explore how far a modern Next.js stack can go compared to a Go/AWS architecture.",
+    period: "Apr 2026 – Present",
+    icon: TrendingUp,
+    color: "from-[oklch(0.85_0.18_145)] to-[oklch(0.65_0.18_180)]",
+    technologies: ["Next.js", "TypeScript", "Supabase", "Bybit API", "CoinGecko API", "Tailwind CSS", "Vercel"],
+    highlights: [
+      { metric: "100+", label: "Cryptocurrencies" },
+      { metric: "Live", label: "Bybit WebSocket" },
+      { metric: "0%", label: "Trading Fees" },
+    ],
+    features: [
+      "Live price feeds via Bybit WebSocket with chunked subscriptions",
+      "Spot and leveraged trading (2x–50x) with real liquidation engine",
+      "Real-time portfolio P&L, trade history, and performance analytics",
+      "Google OAuth and email authentication via Supabase",
+      "Fully responsive across mobile, tablet, and desktop",
+    ],
+    links: {
+      github: "https://github.com/RyanT04/TradeX",
+      live: "https://trade-x-eosin.vercel.app",
+    },
+  },
+  {
+    id: 3,
     title: "Java Query Optimiser for SJDB",
     description: "Cost-based query optimizer implementing relational algebra cost estimation. Uses the Visitor pattern for traversing operator trees and finding optimal execution plans.",
     period: "Feb 2026 – Present",
@@ -57,7 +82,7 @@ const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Encode Hub: Commit to Change Hackathon (Ambrosia)",
     description: "An AI-powered full-stack web application that optimizes healthy eating within a budget by combining real-time grocery pricing with nutritional data.",
     period: "Feb 2026",
@@ -166,12 +191,7 @@ export function ProjectsSection() {
                   {/* Action Buttons */}
                   <div className="flex gap-3">
                     {project.links.github && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="gap-2"
-                        asChild
-                      >
+                      <Button variant="outline" size="sm" className="gap-2" asChild>
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4" />
                           <span className="hidden sm:inline">Source</span>
@@ -179,11 +199,7 @@ export function ProjectsSection() {
                       </Button>
                     )}
                     {project.links.live && (
-                      <Button
-                        size="sm"
-                        className="gap-2"
-                        asChild
-                      >
+                      <Button size="sm" className="gap-2" asChild>
                         <a href={project.links.live} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4" />
                           <span className="hidden sm:inline">Live Demo</span>
