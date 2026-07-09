@@ -11,8 +11,8 @@ const highlights = [
   },
   {
     icon: Lightbulb,
-    title: "Innovation Driven",
-    description: "Building AI-powered solutions and cutting-edge applications",
+    title: "AI-Fluent",
+    description: "Using AI tools deliberately to accelerate prototyping while maintaining test coverage and code review discipline",
   },
   {
     icon: Rocket,
@@ -58,9 +58,9 @@ export function AboutSection() {
             About Me
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-6 text-balance">
-            Innovative. Resourceful.{" "}
+            Practical.{" "}
             <span className="bg-gradient-to-r from-[oklch(0.40_0.18_250)] to-[oklch(0.85_0.18_85)] bg-clip-text text-transparent">
-              Versatile.
+              Adaptable. AI-Fluent.
             </span>
           </h2>
         </div>
@@ -71,38 +71,36 @@ export function AboutSection() {
           <div className="fade-in-section opacity-0 space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
               {
-                "I'm a software engineer pursuing a BEng in Software Engineering at the University of Southampton, driven by a passion for building impactful digital solutions."
+                "I'm a graduate software engineer driven by a passion for building impactful digital solutions."
               }
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               My approach combines rigorous technical standards with creative
               problem-solving. From architecting high-performance trading
               simulators to improving AI-driven interview platforms, I focus on
-              delivering measurable results.
+              delivering measurable results. On TradeX and TradeGo — my paired
+              Next.js and Go/AWS trading simulators — I used AI tools to
+              scaffold boilerplate and speed up prototyping, then reviewed and
+              refactored every piece myself to keep test coverage and code
+              quality intact.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               {
-                "Outside university, I have gained international experience, working as an intern in Brunei and London, collaborating with teams from diverse cultural backgrounds. This has strengthened my ability to work effectively in multicultural environments, beyond just coding."
+                "Outside of that, I have gained international experience, working as an intern in Brunei and London, collaborating with teams from diverse cultural backgrounds and experience, shaped how I communicate and work in multicultural, cross-functional teams."
               }
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-foreground">8+</div>
-                <div className="text-sm text-muted-foreground">Languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-foreground">26%</div>
-                <div className="text-sm text-muted-foreground">
-                  Churn Reduced
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-foreground">75%</div>
-                <div className="text-sm text-muted-foreground">Latency Cut</div>
-              </div>
+            <div className="grid grid-cols-2 gap-6 pt-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground">2</div>
+              <div className="text-sm text-muted-foreground">Full-Stack Apps Shipped</div>
             </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground">75%</div>
+              <div className="text-sm text-muted-foreground">Latency Cut</div>
+            </div>
+          </div>
           </div>
 
           {/* Highlights Grid */}

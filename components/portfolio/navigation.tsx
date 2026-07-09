@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -60,16 +61,19 @@ export function Navigation() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <a
             href="#"
-            className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
+            className="flex items-center hover:opacity-80 transition-opacity"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: "smooth" })
             }}
           >
-            <span className="text-[oklch(0.85_0.18_85)]">R</span>
-            <span className="text-[oklch(0.55_0.22_25)]">T</span>
-            <span className="text-[oklch(0.40_0.18_250)]">K</span>
-            <span className="text-muted-foreground font-light">L</span>
+            <Image
+              src="/favicon.svg"
+              alt="Ryan Kian Logo"
+              width={32}
+              height={32}
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
-import { Github, Linkedin, Mail, Phone, Send, MapPin, ArrowUpRight } from "lucide-react"
+import { Github, Linkedin, Mail, Send, MapPin, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,13 +15,6 @@ const contactLinks = [
     value: "contact@ryantang.dev",
     href: "mailto:contact@ryantang.dev",
     color: "group-hover:text-[oklch(0.55_0.22_25)]",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "Almost leaked again",
-    href: "#",
-    color: "group-hover:text-[oklch(0.85_0.18_85)]",
   },
   {
     icon: Linkedin,
@@ -117,7 +110,7 @@ export function ContactSection() {
                 <span className="font-medium text-foreground">Based in</span>
               </div>
               <p className="text-muted-foreground">
-                United Kingdom <span className="text-foreground">/</span> Malaysia <span className="text-foreground">/</span> Brunei 
+                London, United Kingdom
               </p>
             </div>
           </div>

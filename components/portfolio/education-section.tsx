@@ -65,7 +65,9 @@ export function EducationSection() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">University of Southampton</h3>
-                    <p className="text-lg text-muted-foreground mt-1">BEng Software Engineering</p>
+                    <p className="text-lg text-muted-foreground mt-1">
+                      BEng Software Engineering — 2:1 (Upper Second-Class Honours)
+                    </p>
                   </div>
                 </div>
 
@@ -83,7 +85,7 @@ export function EducationSection() {
 
               {/* Description */}
               <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-                {"Pursuing a rigorous Software Engineering degree with focus on practical application of computer science principles, algorithms and data structures, software development methodologies, and emerging technologies. Active participant in hackathons and coding competitions."}
+                {"Graduated with a rigorous Software Engineering degree, with focus on practical application of computer science principles, algorithms and data structures, software development methodologies, and emerging technologies. Active participant in hackathons and coding competitions."}
               </p>
 
               {/* Key Courses */}

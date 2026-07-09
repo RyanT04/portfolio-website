@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 
-type SkillCategory = "Languages" | "Frameworks" | "Tools" | "Libraries"
+type SkillCategory = "Languages" | "Frameworks" | "Tools" | "Databases" | "Testing"
 
 const skillCategories: Record<SkillCategory, { name: string; level: number }[]> = {
   Languages: [
@@ -14,7 +14,6 @@ const skillCategories: Record<SkillCategory, { name: string; level: number }[]> 
     { name: "Java", level: 85 },
     { name: "SQL", level: 82 },
     { name: "C#", level: 75 },
-    { name: "Haskell", level: 70 },
   ],
   Frameworks: [
     { name: "React", level: 95 },
@@ -32,27 +31,38 @@ const skillCategories: Record<SkillCategory, { name: string; level: number }[]> 
     { name: "AWS", level: 88 },
     { name: "Azure", level: 80 },
     { name: "Jenkins", level: 78 },
+    { name: "GitHub Actions", level: 80 },
     { name: "Jira", level: 85 },
     { name: "Grafana", level: 82 },
     { name: "Prometheus", level: 80 },
   ],
-  Libraries: [
-    { name: "TailwindCSS", level: 95 },
-    { name: "Shadcn", level: 92 },
-    { name: "pandas", level: 85 },
-    { name: "NumPy", level: 82 },
-    { name: "PyTorch", level: 78 },
-    { name: "scikit-learn", level: 80 },
-    { name: "Matplotlib", level: 75 },
+  Databases: [
+    // TODO: add real databases used, e.g. PostgreSQL, MongoDB, Supabase, DynamoDB
+  ],
+  Testing: [
     { name: "JUnit", level: 82 },
+    // TODO: add other testing tools used, e.g. Jest, Go testing, Cypress, pytest
   ],
 }
+
+// Tools with coursework-level (not project-level) exposure — shown in the
+// tag cloud only, not as a scored proficiency category.
+const additionalTechnologies = [
+  "NumPy",
+  "pandas",
+  "PyTorch",
+  "scikit-learn",
+  "Matplotlib",
+  "TailwindCSS",
+  "Shadcn",
+]
 
 const categoryColors: Record<SkillCategory, string> = {
   Languages: "from-[oklch(0.40_0.18_250)] to-[oklch(0.40_0.18_250)]",
   Frameworks: "from-[oklch(0.55_0.22_25)] to-[oklch(0.55_0.22_25)]",
   Tools: "from-[oklch(0.85_0.18_85)] to-[oklch(0.75_0.15_75)]",
-  Libraries: "from-primary to-primary",
+  Databases: "from-primary to-primary",
+  Testing: "from-[oklch(0.55_0.22_25)] to-[oklch(0.85_0.18_85)]",
 }
 
 export function SkillsSection() {
@@ -151,16 +161,17 @@ export function SkillsSection() {
         <div className="fade-in-section opacity-0 mt-12 pt-8 border-t border-border/30">
           <h3 className="text-sm uppercase tracking-widest text-muted-foreground mb-6">All Technologies</h3>
           <div className="flex flex-wrap gap-2">
-            {Object.values(skillCategories)
-              .flat()
-              .map((skill) => (
-                <span
-                  key={skill.name}
-                  className="px-3 py-1.5 text-sm rounded-full glass text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all cursor-default"
-                >
-                  {skill.name}
-                </span>
-              ))}
+            {[
+              ...Object.values(skillCategories).flat().map((skill) => skill.name),
+              ...additionalTechnologies,
+            ].map((name) => (
+              <span
+                key={name}
+                className="px-3 py-1.5 text-sm rounded-full glass text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all cursor-default"
+              >
+                {name}
+              </span>
+            ))}
           </div>
         </div>
       </div>

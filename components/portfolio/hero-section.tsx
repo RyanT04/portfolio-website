@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Github, Linkedin, Mail, Phone, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -37,7 +37,6 @@ export function HeroSection() {
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:contact@ryantang.dev", label: "Email" },
-    { icon: Phone,label: "Almost leaked it" },
   ];
 
   return (
@@ -67,7 +66,7 @@ export function HeroSection() {
           </span>
 
           <span className="inline-block px-4 py-2 rounded-full glass text-sm font-medium text-muted-foreground mb-6">
-            Growth Engineer
+            Full-Stack Developer
           </span>
         </div>
 
@@ -87,9 +86,9 @@ export function HeroSection() {
           className="fade-in-section opacity-0 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-pretty"
           style={{ animationDelay: "0.6s" }}
         >
-          I'm passionate about creating modern,
-          efficient and scalable solutions that that solves real-world problems
-          and deliver meaningful value.
+          I'm passionate about creating modern, efficient and scalable
+          solutions that solve real-world problems and deliver meaningful
+          value.
         </p>
 
         {/* Social Links */}
