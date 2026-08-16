@@ -78,11 +78,13 @@ export function AboutSection() {
               My approach combines rigorous technical standards with creative
               problem-solving. From architecting high-performance trading
               simulators to improving AI-driven interview platforms, I focus on
-              delivering measurable results. On TradeX and TradeGo — my paired
-              Next.js and Go/AWS trading simulators — I used AI tools to
-              scaffold boilerplate and speed up prototyping, then reviewed and
+              delivering measurable results. On TradeX and TradeGo, my paired
+              Next.js and Go trading simulators, I used AI tools to scaffold
+              boilerplate and speed up prototyping, then reviewed and
               refactored every piece myself to keep test coverage and code
-              quality intact.
+              quality intact. TradeGo originally ran on AWS ECS Fargate before
+              I migrated it to a self-hosted DigitalOcean droplet to cut
+              running costs.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               {
@@ -92,15 +94,15 @@ export function AboutSection() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground">2</div>
-              <div className="text-sm text-muted-foreground">Full-Stack Apps Shipped</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-foreground">2</div>
+                <div className="text-sm text-muted-foreground">Full-Stack Apps Shipped</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-foreground">400+</div>
+                <div className="text-sm text-muted-foreground">Live Instruments Tracked</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground">75%</div>
-              <div className="text-sm text-muted-foreground">Latency Cut</div>
-            </div>
-          </div>
           </div>
 
           {/* Highlights Grid */}

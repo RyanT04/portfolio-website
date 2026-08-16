@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -37,6 +37,12 @@ export function HeroSection() {
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:contact@ryantang.dev", label: "Email" },
+    {
+      icon: FileText,
+      href: "/CV.pdf",
+      label: "CV",
+      downloadAs: "Ryan-Tang-CV.pdf",
+    },
   ];
 
   return (
@@ -86,7 +92,7 @@ export function HeroSection() {
           className="fade-in-section opacity-0 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-pretty"
           style={{ animationDelay: "0.6s" }}
         >
-          I'm passionate about creating modern, efficient and scalable
+          I&apos;m passionate about creating modern, efficient and scalable
           solutions that solve real-world problems and deliver meaningful
           value.
         </p>
@@ -102,6 +108,7 @@ export function HeroSection() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
+              download={link.downloadAs}
               className="group relative p-3 rounded-xl glass hover:bg-primary/20 transition-all duration-300"
               aria-label={link.label}
             >
