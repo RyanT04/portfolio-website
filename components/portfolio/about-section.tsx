@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: Code2,
     title: "Technical Excellence",
-    description: "Mastery across multiple programming paradigms and modern tech stacks",
+    description: "Working across multiple languages and modern stacks, from Go backends to Next.js frontends",
   },
   {
     icon: Lightbulb,
@@ -88,14 +88,14 @@ export function AboutSection() {
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               {
-                "Outside of that, I have gained international experience, working as an intern in Brunei and London, collaborating with teams from diverse cultural backgrounds and experience, shaped how I communicate and work in multicultural, cross-functional teams."
+                "I've also gained international experience interning in Brunei and London (remote), collaborating with teams from diverse cultural and professional backgrounds, which has shaped how I communicate in multicultural, cross-functional teams."
               }
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-foreground">2</div>
+                <div className="text-3xl font-bold text-foreground">3</div>
                 <div className="text-sm text-muted-foreground">Full-Stack Apps Shipped</div>
               </div>
               <div className="text-center">

@@ -14,23 +14,24 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ryantang.dev'),
   title: 'Ryan Tang Kwang Loke | Software Engineer',
   description: 'Portfolio of Ryan Tang Kwang Loke — a graduate Software Engineer specializing in full-stack development, cloud infrastructure, and AI integration.',
   keywords: ['Software Engineer', 'Full Stack Developer', 'React', 'Next.js', 'Go', 'TypeScript', 'AWS'],
   authors: [{ name: 'Ryan Tang Kwang Loke' }],
   openGraph: {
-  title: 'Ryan Tang Kwang Loke | Software Engineer',
-  description: 'Portfolio of Ryan Tang Kwang Loke — a graduate Software Engineer specializing in full-stack development, cloud infrastructure, and AI integration.',
-  type: 'website',
-  images: [
-    {
-      url: '/og-image.png',
-      width: 1200,
-      height: 630,
-      alt: 'Ryan Tang Kwang Loke - Software Engineer Portfolio',
-    },
-  ],
-},
+    title: 'Ryan Tang Kwang Loke | Software Engineer',
+    description: 'Portfolio of Ryan Tang Kwang Loke — a graduate Software Engineer specializing in full-stack development, cloud infrastructure, and AI integration.',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ryan Tang Kwang Loke - Software Engineer Portfolio',
+      },
+    ],
+  },
   icons: {
     icon: [
       {
